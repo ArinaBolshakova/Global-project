@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Global</title>
+  </head>
+
+   <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="header__inner">
+  
+           <div class="header-logo"> <a>
+             <img src="../проект Global/img/logo.svg" alt="Logo global"></a>
+           </div>
+
+           <div class="burger-container">
+            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+              <nav class="site-navigation">
+                <a class="nav__link nav__link--active" href="#">Mobile Top Up</a>
+                <a class="nav__link" href="#">About</a>
+                <a class="nav__link" href="#">Rate</a>
+                <a class="nav__link" href="#">Help</a>
+              </nav> 
+            </div>
+            
+            <div class="user-navigation">
+                <a class="login-link" href="#">Sign Up</a>
+            </div> 
+
+            </div>  
+          </div>     
+    </header>
+
+    <main class="main">
+      <section class="main-block">
+
+        <div class="main-text">
+            <h1>Now Buy Your <br> PIN or <span>Top Up</span> <br> With Bank Transfer </h1>
+            <h2>We Make international calling simple, relible, and cheap basedon your unique calling behavior.</h2>
+            <button class="started__button" type="button">Get Started</button>
+
+            <form class="search__form">
+                <input type="text" id="restrictedInput" maxlength="12" minlength="4" placeholder="Where do you want to call?"/>
+                <button class="search__button" type="submit"></button>
+            </form>
+            
+            <div class="users-icon"> 
+              <div class="user-images"> 
+                <div class="icon-1"><img class="icon" src="../проект Global/img/man-1.png"></div>
+                <div class="icon-2"><img class="icon" src="../проект Global/img/man-2.png"> </div>
+                <div class="icon-3"><img class="icon" src="../проект Global/img/man-3.png"></div>
+                <div class="orange-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                    <circle cx="19" cy="19" r="17.5" fill="#FF8345" stroke="white" stroke-width="3"/>
+                    <image href="../проект Global/img/plus.svg" width="19" height="19" x="9.5" y="9.5" />
+                  </svg> 
+                </div>
+              </div>
+              <p> 45k+ Regular User. <span><a class="price__link" href="#">View Price Plan</a></span></p>
+            </div>
+        </div>
+        
+          <div class="woman_picture"> 
+            <img class="woman_icon" src="../проект Global/img/woman.png"> 
+            <div class="ellipse-background"></div>   
+
+            <div class="animation-container">
+            <img src="../проект Global/img/flag-1.png" class="block" id="block1"> 
+            <img src="../проект Global/img/flag-2.png" class="block" id="block2">   
+            <img src="../проект Global/img/flag-3.png" class="block" id="block3">   
+            <img src="../проект Global/img/flag-4.png" class="block" id="block4">   
+            <img src="../проект Global/img/flag-5.png" class="block" id="block5">  
+          </div>
+
+        </div>
+      </section>     
+    </main>
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+  var restrictedInput = document.getElementById("restrictedInput");
+
+  restrictedInput.addEventListener("input", function (event) {
+    var inputValue = event.target.value;
+    var filteredValue = inputValue.replace(/[!@#$%^&*()]/g, "");
+    event.target.value = filteredValue;
+  });
+});
+    </script>
+
+  <script> const burger = document.querySelector('.burger');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+    });
+    </script>
+
+   </body>
+   </html>
